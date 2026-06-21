@@ -1,0 +1,1417 @@
+{
+  "main_category": "Factory Recipes",
+  "workstations": {
+    "Jewelry Workstation": {
+      "setup_machines": [
+        {
+          "name": "Laser Cutting Machine",
+          "price": 145000
+        },
+        {
+          "name": "Polishing Machine",
+          "price": 125000
+        },
+        {
+          "name": "Consumer Goods Assembly Machine",
+          "price": 240000
+        }
+      ],
+      "products": [
+        {
+          "name": "Jewelry (Expensive)",
+          "outputs": {
+            "low_skill": 15,
+            "max_skill": 30
+          },
+          "ingredients": [
+            {
+              "name": "Uncut Gems (Expensive)",
+              "amount": 30
+            },
+            {
+              "name": "Metal Band",
+              "amount": 30
+            }
+          ]
+        },
+        {
+          "name": "Jewelry (Cheap)",
+          "outputs": {
+            "low_skill": 30,
+            "max_skill": 60
+          },
+          "ingredients": [
+            {
+              "name": "Uncut Gems (Cheap)",
+              "amount": 60
+            },
+            {
+              "name": "Metal Band",
+              "amount": 60
+            }
+          ]
+        }
+      ]
+    },
+    "Electronics Workstation": {
+      "setup_machines": [
+        {
+          "name": "Kiln Machine",
+          "price": 115000
+        },
+        {
+          "name": "Laser Cutting Machine",
+          "price": 145000
+        },
+        {
+          "name": "Consumer Goods Assembly Machine",
+          "price": 240000
+        }
+      ],
+      "products": [
+        {
+          "name": "Arty Fish Phone",
+          "outputs": {
+            "low_skill": 15,
+            "max_skill": 30
+          },
+          "ingredients": [
+            {
+              "name": "Resistors",
+              "amount": 300
+            },
+            {
+              "name": "Transistors",
+              "amount": 300
+            },
+            {
+              "name": "Capacitors",
+              "amount": 300
+            },
+            {
+              "name": "Integrated Circuits",
+              "amount": 60
+            },
+            {
+              "name": "Copper Clad Laminate",
+              "amount": 30
+            },
+            {
+              "name": "Speaker",
+              "amount": 30
+            },
+            {
+              "name": "Microphone",
+              "amount": 30
+            },
+            {
+              "name": "Plastic",
+              "amount": 30
+            },
+            {
+              "name": "Glass",
+              "amount": 30
+            },
+            {
+              "name": "Battery",
+              "amount": 30
+            }
+          ]
+        },
+        {
+          "name": "Arty Fish Smartwatch",
+          "outputs": {
+            "low_skill": 15,
+            "max_skill": 30
+          },
+          "ingredients": [
+            {
+              "name": "Resistors",
+              "amount": 60
+            },
+            {
+              "name": "Transistors",
+              "amount": 60
+            },
+            {
+              "name": "Capacitors",
+              "amount": 60
+            },
+            {
+              "name": "Integrated Circuits",
+              "amount": 30
+            },
+            {
+              "name": "Copper Clad Laminate",
+              "amount": 30
+            },
+            {
+              "name": "Speaker",
+              "amount": 30
+            },
+            {
+              "name": "Microphone",
+              "amount": 30
+            },
+            {
+              "name": "Plastic",
+              "amount": 5
+            },
+            {
+              "name": "Glass",
+              "amount": 5
+            },
+            {
+              "name": "Battery",
+              "amount": 30
+            }
+          ]
+        },
+        {
+          "name": "ZanaMan Phone",
+          "outputs": {
+            "low_skill": 15,
+            "max_skill": 30
+          },
+          "ingredients": [
+            {
+              "name": "Resistors",
+              "amount": 300
+            },
+            {
+              "name": "Transistors",
+              "amount": 300
+            },
+            {
+              "name": "Capacitors",
+              "amount": 300
+            },
+            {
+              "name": "Integrated Circuits",
+              "amount": 60
+            },
+            {
+              "name": "Copper Clad Laminate",
+              "amount": 30
+            },
+            {
+              "name": "Speaker",
+              "amount": 30
+            },
+            {
+              "name": "Microphone",
+              "amount": 30
+            },
+            {
+              "name": "Plastic",
+              "amount": 30
+            },
+            {
+              "name": "Glass",
+              "amount": 30
+            },
+            {
+              "name": "Battery",
+              "amount": 30
+            }
+          ]
+        },
+        {
+          "name": "ZanaMan Smartwatch",
+          "outputs": {
+            "low_skill": 15,
+            "max_skill": 30
+          },
+          "ingredients": [
+            {
+              "name": "Resistors",
+              "amount": 60
+            },
+            {
+              "name": "Transistors",
+              "amount": 60
+            },
+            {
+              "name": "Capacitors",
+              "amount": 60
+            },
+            {
+              "name": "Integrated Circuits",
+              "amount": 30
+            },
+            {
+              "name": "Copper Clad Laminate",
+              "amount": 30
+            },
+            {
+              "name": "Speaker",
+              "amount": 30
+            },
+            {
+              "name": "Microphone",
+              "amount": 30
+            },
+            {
+              "name": "Plastic",
+              "amount": 5
+            },
+            {
+              "name": "Glass",
+              "amount": 5
+            },
+            {
+              "name": "Battery",
+              "amount": 30
+            }
+          ]
+        },
+        {
+          "name": "Noize Boss Earbuds",
+          "outputs": {
+            "low_skill": 30,
+            "max_skill": 60
+          },
+          "ingredients": [
+            {
+              "name": "Resistors",
+              "amount": 60
+            },
+            {
+              "name": "Transistors",
+              "amount": 60
+            },
+            {
+              "name": "Capacitors",
+              "amount": 60
+            },
+            {
+              "name": "Integrated Circuits",
+              "amount": 60
+            },
+            {
+              "name": "Copper Clad Laminate",
+              "amount": 10
+            },
+            {
+              "name": "Speaker",
+              "amount": 120
+            },
+            {
+              "name": "Microphone",
+              "amount": 60
+            },
+            {
+              "name": "Plastic",
+              "amount": 10
+            }
+          ]
+        },
+        {
+          "name": "Rhythm By Tre Headphones",
+          "outputs": {
+            "low_skill": 30,
+            "max_skill": 60
+          },
+          "ingredients": [
+            {
+              "name": "Resistors",
+              "amount": 120
+            },
+            {
+              "name": "Transistors",
+              "amount": 120
+            },
+            {
+              "name": "Capacitors",
+              "amount": 120
+            },
+            {
+              "name": "Integrated Circuits",
+              "amount": 60
+            },
+            {
+              "name": "Copper Clad Laminate",
+              "amount": 20
+            },
+            {
+              "name": "Speaker",
+              "amount": 120
+            },
+            {
+              "name": "Microphone",
+              "amount": 60
+            },
+            {
+              "name": "Plastic",
+              "amount": 20
+            }
+          ]
+        }
+      ]
+    },
+    "Clothing Workstation": {
+      "setup_machines": [
+        {
+          "name": "Laser Cutting Machine",
+          "price": 145000
+        },
+        {
+          "name": "Industrial Sewing Machine",
+          "price": 95000
+        },
+        {
+          "name": "Consumer Goods Assembly Machine",
+          "price": 240000
+        }
+      ],
+      "products": [
+        {
+          "name": "Clothing (Classic Expensive Female)",
+          "outputs": {
+            "low_skill": 15,
+            "max_skill": 30
+          },
+          "ingredients": [
+            {
+              "name": "Fabric (Expensive)",
+              "amount": 60
+            }
+          ]
+        },
+        {
+          "name": "Clothing (Classic Expensive Male)",
+          "outputs": {
+            "low_skill": 15,
+            "max_skill": 30
+          },
+          "ingredients": [
+            {
+              "name": "Fabric (Expensive)",
+              "amount": 60
+            }
+          ]
+        },
+        {
+          "name": "Clothing (Modern Expensive Female)",
+          "outputs": {
+            "low_skill": 15,
+            "max_skill": 30
+          },
+          "ingredients": [
+            {
+              "name": "Fabric (Expensive)",
+              "amount": 60
+            }
+          ]
+        },
+        {
+          "name": "Clothing (Modern Expensive Male)",
+          "outputs": {
+            "low_skill": 15,
+            "max_skill": 30
+          },
+          "ingredients": [
+            {
+              "name": "Fabric (Expensive)",
+              "amount": 60
+            }
+          ]
+        },
+        {
+          "name": "Clothing (Classic Cheap Female)",
+          "outputs": {
+            "low_skill": 30,
+            "max_skill": 60
+          },
+          "ingredients": [
+            {
+              "name": "Fabric (Cheap)",
+              "amount": 120
+            }
+          ]
+        },
+        {
+          "name": "Clothing (Classic Cheap Male)",
+          "outputs": {
+            "low_skill": 30,
+            "max_skill": 60
+          },
+          "ingredients": [
+            {
+              "name": "Fabric (Cheap)",
+              "amount": 120
+            }
+          ]
+        },
+        {
+          "name": "Clothing (Modern Cheap Female)",
+          "outputs": {
+            "low_skill": 30,
+            "max_skill": 60
+          },
+          "ingredients": [
+            {
+              "name": "Fabric (Cheap)",
+              "amount": 120
+            }
+          ]
+        },
+        {
+          "name": "Clothing (Modern Cheap Male)",
+          "outputs": {
+            "low_skill": 30,
+            "max_skill": 60
+          },
+          "ingredients": [
+            {
+              "name": "Fabric (Cheap)",
+              "amount": 120
+            }
+          ]
+        }
+      ]
+    },
+    "Bottled Goods Workstation": {
+      "setup_machines": [
+        {
+          "name": "Industrial Blending Machine",
+          "price": 45000
+        },
+        {
+          "name": "Bottling Machine",
+          "price": 27500
+        },
+        {
+          "name": "Food Assembly Machine",
+          "price": 60000
+        }
+      ],
+      "products": [
+        {
+          "name": "Beer",
+          "outputs": {
+            "low_skill": 25,
+            "max_skill": 50
+          },
+          "ingredients": [
+            {
+              "name": "Water",
+              "amount": 50
+            },
+            {
+              "name": "Barley",
+              "amount": 50
+            },
+            {
+              "name": "Yeast",
+              "amount": 50
+            },
+            {
+              "name": "Carbon Dioxide",
+              "amount": 50
+            },
+            {
+              "name": "Hops",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Bottle of Wine",
+          "outputs": {
+            "low_skill": 25,
+            "max_skill": 50
+          },
+          "ingredients": [
+            {
+              "name": "Grapes",
+              "amount": 100
+            },
+            {
+              "name": "Sugar",
+              "amount": 50
+            },
+            {
+              "name": "Yeast",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Margarita",
+          "outputs": {
+            "low_skill": 25,
+            "max_skill": 50
+          },
+          "ingredients": [
+            {
+              "name": "Water",
+              "amount": 50
+            },
+            {
+              "name": "Barley",
+              "amount": 50
+            },
+            {
+              "name": "Yeast",
+              "amount": 50
+            },
+            {
+              "name": "Blue Agave",
+              "amount": 100
+            },
+            {
+              "name": "Lime Juice",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Martini",
+          "outputs": {
+            "low_skill": 25,
+            "max_skill": 50
+          },
+          "ingredients": [
+            {
+              "name": "Water",
+              "amount": 50
+            },
+            {
+              "name": "Barley",
+              "amount": 50
+            },
+            {
+              "name": "Yeast",
+              "amount": 50
+            },
+            {
+              "name": "Juniper Berries",
+              "amount": 100
+            },
+            {
+              "name": "Vermouth",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Whisky",
+          "outputs": {
+            "low_skill": 25,
+            "max_skill": 50
+          },
+          "ingredients": [
+            {
+              "name": "Water",
+              "amount": 50
+            },
+            {
+              "name": "Barley",
+              "amount": 100
+            },
+            {
+              "name": "Yeast",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Hair Care Product",
+          "outputs": {
+            "low_skill": 75,
+            "max_skill": 150
+          },
+          "ingredients": [
+            {
+              "name": "Water",
+              "amount": 150
+            },
+            {
+              "name": "Hair Care Formula",
+              "amount": 150
+            }
+          ]
+        },
+        {
+          "name": "Cup Of Coffee",
+          "outputs": {
+            "low_skill": 125,
+            "max_skill": 250
+          },
+          "ingredients": [
+            {
+              "name": "Water",
+              "amount": 250
+            },
+            {
+              "name": "Ground Coffee Beans",
+              "amount": 250
+            }
+          ]
+        },
+        {
+          "name": "Cup of Tea",
+          "outputs": {
+            "low_skill": 125,
+            "max_skill": 250
+          },
+          "ingredients": [
+            {
+              "name": "Water",
+              "amount": 250
+            },
+            {
+              "name": "Tea Leaves",
+              "amount": 250
+            }
+          ]
+        },
+        {
+          "name": "Energy Drink",
+          "outputs": {
+            "low_skill": 125,
+            "max_skill": 250
+          },
+          "ingredients": [
+            {
+              "name": "Water",
+              "amount": 250
+            },
+            {
+              "name": "Sugar",
+              "amount": 250
+            },
+            {
+              "name": "Carbon Dioxide",
+              "amount": 250
+            },
+            {
+              "name": "Caffeine Extract",
+              "amount": 250
+            }
+          ]
+        },
+        {
+          "name": "Slushie",
+          "outputs": {
+            "low_skill": 125,
+            "max_skill": 250
+          },
+          "ingredients": [
+            {
+              "name": "Water",
+              "amount": 250
+            },
+            {
+              "name": "Sugar",
+              "amount": 250
+            },
+            {
+              "name": "Flavor Syrup",
+              "amount": 250
+            }
+          ]
+        },
+        {
+          "name": "Soda Can",
+          "outputs": {
+            "low_skill": 125,
+            "max_skill": 250
+          },
+          "ingredients": [
+            {
+              "name": "Water",
+              "amount": 250
+            },
+            {
+              "name": "Sugar",
+              "amount": 250
+            },
+            {
+              "name": "Carbon Dioxide",
+              "amount": 250
+            },
+            {
+              "name": "Cola Flavoring",
+              "amount": 250
+            }
+          ]
+        }
+      ]
+    },
+    "Garden Workstation": {
+      "setup_machines": [
+        {
+          "name": "Hydroponic Planter",
+          "price": 35000
+        },
+        {
+          "name": "Food Assembly Machine",
+          "price": 60000
+        }
+      ],
+      "products": [
+        {
+          "name": "Flower (Cheap)",
+          "outputs": {
+            "low_skill": 50,
+            "max_skill": 100
+          },
+          "ingredients": [
+            {
+              "name": "Seeds (Flower Cheap)",
+              "amount": 100
+            },
+            {
+              "name": "Water",
+              "amount": 100
+            }
+          ]
+        },
+        {
+          "name": "Flower (Expensive)",
+          "outputs": {
+            "low_skill": 50,
+            "max_skill": 100
+          },
+          "ingredients": [
+            {
+              "name": "Seeds (Flower Expensive)",
+              "amount": 100
+            },
+            {
+              "name": "Water",
+              "amount": 100
+            }
+          ]
+        },
+        {
+          "name": "Bag of Apples",
+          "outputs": {
+            "low_skill": 125,
+            "max_skill": 250
+          },
+          "ingredients": [
+            {
+              "name": "Seeds (Apple)",
+              "amount": 50
+            },
+            {
+              "name": "Water",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Bag of Bananas",
+          "outputs": {
+            "low_skill": 125,
+            "max_skill": 250
+          },
+          "ingredients": [
+            {
+              "name": "Seeds (Banana)",
+              "amount": 50
+            },
+            {
+              "name": "Water",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Bag of Carrots",
+          "outputs": {
+            "low_skill": 125,
+            "max_skill": 250
+          },
+          "ingredients": [
+            {
+              "name": "Seeds (Carrot)",
+              "amount": 50
+            },
+            {
+              "name": "Water",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Bag of Lettuce",
+          "outputs": {
+            "low_skill": 125,
+            "max_skill": 250
+          },
+          "ingredients": [
+            {
+              "name": "Seeds (Lettuce)",
+              "amount": 50
+            },
+            {
+              "name": "Water",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Bag of Pears",
+          "outputs": {
+            "low_skill": 125,
+            "max_skill": 250
+          },
+          "ingredients": [
+            {
+              "name": "Seeds (Pear)",
+              "amount": 50
+            },
+            {
+              "name": "Water",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Bag of Tomatoes",
+          "outputs": {
+            "low_skill": 125,
+            "max_skill": 250
+          },
+          "ingredients": [
+            {
+              "name": "Seeds (Tomato)",
+              "amount": 50
+            },
+            {
+              "name": "Water",
+              "amount": 50
+            }
+          ]
+        }
+      ]
+    },
+    "Consumer Goods Workstation": {
+      "setup_machines": [
+        {
+          "name": "Laser Cutting Machine",
+          "price": 145000
+        },
+        {
+          "name": "Consumer Goods Assembly Machine",
+          "price": 240000
+        }
+      ],
+      "products": [
+        {
+          "name": "Cigar",
+          "outputs": {
+            "low_skill": 50,
+            "max_skill": 100
+          },
+          "ingredients": [
+            {
+              "name": "Cigar Paper",
+              "amount": 20
+            },
+            {
+              "name": "Tobacco",
+              "amount": 100
+            }
+          ]
+        },
+        {
+          "name": "Gift (Cheap)",
+          "outputs": {
+            "low_skill": 50,
+            "max_skill": 100
+          },
+          "ingredients": [
+            {
+              "name": "Clay",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Gift (Expensive)",
+          "outputs": {
+            "low_skill": 50,
+            "max_skill": 100
+          },
+          "ingredients": [
+            {
+              "name": "Water",
+              "amount": 100
+            },
+            {
+              "name": "Glass",
+              "amount": 100
+            },
+            {
+              "name": "Plastic",
+              "amount": 250
+            }
+          ]
+        },
+        {
+          "name": "Limited Edition Book",
+          "outputs": {
+            "low_skill": 50,
+            "max_skill": 100
+          },
+          "ingredients": [
+            {
+              "name": "Paper Ream",
+              "amount": 2
+            },
+            {
+              "name": "Fabric (Expensive)",
+              "amount": 100
+            }
+          ]
+        },
+        {
+          "name": "Motivational Book",
+          "outputs": {
+            "low_skill": 50,
+            "max_skill": 100
+          },
+          "ingredients": [
+            {
+              "name": "Paper Ream",
+              "amount": 3
+            },
+            {
+              "name": "Fabric (Cheap)",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Novel",
+          "outputs": {
+            "low_skill": 50,
+            "max_skill": 100
+          },
+          "ingredients": [
+            {
+              "name": "Paper Ream",
+              "amount": 3
+            },
+            {
+              "name": "Fabric (Cheap)",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Pack of Cigarettes",
+          "outputs": {
+            "low_skill": 50,
+            "max_skill": 100
+          },
+          "ingredients": [
+            {
+              "name": "Cigarette Paper",
+              "amount": 20
+            },
+            {
+              "name": "Tobacco",
+              "amount": 100
+            }
+          ]
+        },
+        {
+          "name": "Picture Book",
+          "outputs": {
+            "low_skill": 50,
+            "max_skill": 100
+          },
+          "ingredients": [
+            {
+              "name": "Paper Ream",
+              "amount": 1
+            },
+            {
+              "name": "Fabric (Cheap)",
+              "amount": 20
+            }
+          ]
+        },
+        {
+          "name": "Technical Manual",
+          "outputs": {
+            "low_skill": 50,
+            "max_skill": 100
+          },
+          "ingredients": [
+            {
+              "name": "Paper Ream",
+              "amount": 5
+            },
+            {
+              "name": "Fabric (Expensive)",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Umbrella",
+          "outputs": {
+            "low_skill": 50,
+            "max_skill": 100
+          },
+          "ingredients": [
+            {
+              "name": "Plastic",
+              "amount": 50
+            },
+            {
+              "name": "Metal Wire",
+              "amount": 100
+            }
+          ]
+        },
+        {
+          "name": "Youth Novel",
+          "outputs": {
+            "low_skill": 50,
+            "max_skill": 100
+          },
+          "ingredients": [
+            {
+              "name": "Paper Ream",
+              "amount": 1
+            },
+            {
+              "name": "Fabric (Cheap)",
+              "amount": 20
+            }
+          ]
+        },
+        {
+          "name": "Paper Bag",
+          "outputs": {
+            "low_skill": 250,
+            "max_skill": 500
+          },
+          "ingredients": [
+            {
+              "name": "Paper Ream",
+              "amount": 2
+            }
+          ]
+        }
+      ]
+    },
+    "Food Workstation": {
+      "setup_machines": [
+        {
+          "name": "Industrial Blending Machine",
+          "price": 45000
+        },
+        {
+          "name": "Automated Baking Machine",
+          "price": 75000
+        },
+        {
+          "name": "Food Assembly Machine",
+          "price": 60000
+        }
+      ],
+      "products": [
+        {
+          "name": "Burger",
+          "outputs": {
+            "low_skill": 100,
+            "max_skill": 200
+          },
+          "ingredients": [
+            {
+              "name": "Ground Beef",
+              "amount": 200
+            },
+            {
+              "name": "Dough",
+              "amount": 200
+            },
+            {
+              "name": "Cheese",
+              "amount": 40
+            }
+          ]
+        },
+        {
+          "name": "Cheese Platter",
+          "outputs": {
+            "low_skill": 100,
+            "max_skill": 200
+          },
+          "ingredients": [
+            {
+              "name": "Cheese",
+              "amount": 200
+            }
+          ]
+        },
+        {
+          "name": "Chicken Kabob Skewer",
+          "outputs": {
+            "low_skill": 100,
+            "max_skill": 200
+          },
+          "ingredients": [
+            {
+              "name": "Chicken Breast",
+              "amount": 200
+            },
+            {
+              "name": "Vinaigrette",
+              "amount": 100
+            },
+            {
+              "name": "Onion",
+              "amount": 100
+            },
+            {
+              "name": "Pepper",
+              "amount": 100
+            }
+          ]
+        },
+        {
+          "name": "Cotton Candy",
+          "outputs": {
+            "low_skill": 100,
+            "max_skill": 200
+          },
+          "ingredients": [
+            {
+              "name": "Sugar",
+              "amount": 200
+            }
+          ]
+        },
+        {
+          "name": "Croissant",
+          "outputs": {
+            "low_skill": 100,
+            "max_skill": 200
+          },
+          "ingredients": [
+            {
+              "name": "Dough",
+              "amount": 200
+            },
+            {
+              "name": "Butter",
+              "amount": 100
+            }
+          ]
+        },
+        {
+          "name": "Cupcake",
+          "outputs": {
+            "low_skill": 100,
+            "max_skill": 200
+          },
+          "ingredients": [
+            {
+              "name": "Baking Mix",
+              "amount": 200
+            },
+            {
+              "name": "Milk",
+              "amount": 100
+            },
+            {
+              "name": "Sugar",
+              "amount": 100
+            }
+          ]
+        },
+        {
+          "name": "Donut",
+          "outputs": {
+            "low_skill": 100,
+            "max_skill": 200
+          },
+          "ingredients": [
+            {
+              "name": "Milk",
+              "amount": 100
+            },
+            {
+              "name": "Sugar",
+              "amount": 100
+            },
+            {
+              "name": "Dough",
+              "amount": 200
+            }
+          ]
+        },
+        {
+          "name": "French Fries",
+          "outputs": {
+            "low_skill": 100,
+            "max_skill": 200
+          },
+          "ingredients": [
+            {
+              "name": "Russet Potatoes",
+              "amount": 200
+            },
+            {
+              "name": "Bag of Tomatoes",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Fresh Food",
+          "outputs": {
+            "low_skill": 100,
+            "max_skill": 200
+          },
+          "ingredients": [
+            {
+              "name": "Ground Beef",
+              "amount": 200
+            },
+            {
+              "name": "Russet Potatoes",
+              "amount": 200
+            },
+            {
+              "name": "Bag of Tomatoes",
+              "amount": 100
+            }
+          ]
+        },
+        {
+          "name": "Frozen Food",
+          "outputs": {
+            "low_skill": 100,
+            "max_skill": 200
+          },
+          "ingredients": [
+            {
+              "name": "Chicken Breast",
+              "amount": 200
+            },
+            {
+              "name": "Vinaigrette",
+              "amount": 100
+            }
+          ]
+        },
+        {
+          "name": "Hotdog",
+          "outputs": {
+            "low_skill": 100,
+            "max_skill": 200
+          },
+          "ingredients": [
+            {
+              "name": "Raw Sausage",
+              "amount": 200
+            },
+            {
+              "name": "Dough",
+              "amount": 200
+            },
+            {
+              "name": "Bag of Tomatoes",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "name": "Ice Cream",
+          "outputs": {
+            "low_skill": 100,
+            "max_skill": 200
+          },
+          "ingredients": [
+            {
+              "name": "Sugar",
+              "amount": 200
+            },
+            {
+              "name": "Milk",
+              "amount": 200
+            }
+          ]
+        },
+        {
+          "name": "Pizza",
+          "outputs": {
+            "low_skill": 100,
+            "max_skill": 200
+          },
+          "ingredients": [
+            {
+              "name": "Dough",
+              "amount": 200
+            },
+            {
+              "name": "Bag of Tomatoes",
+              "amount": 100
+            },
+            {
+              "name": "Cheese",
+              "amount": 200
+            }
+          ]
+        },
+        {
+          "name": "Popcorn",
+          "outputs": {
+            "low_skill": 100,
+            "max_skill": 200
+          },
+          "ingredients": [
+            {
+              "name": "Popcorn Kernels",
+              "amount": 200
+            },
+            {
+              "name": "Butter",
+              "amount": 10
+            }
+          ]
+        },
+        {
+          "name": "Salad",
+          "outputs": {
+            "low_skill": 100,
+            "max_skill": 200
+          },
+          "ingredients": [
+            {
+              "name": "Vinaigrette",
+              "amount": 100
+            },
+            {
+              "name": "Bag of Lettuce",
+              "amount": 200
+            },
+            {
+              "name": "Bag of Tomatoes",
+              "amount": 100
+            },
+            {
+              "name": "Pepper",
+              "amount": 100
+            },
+            {
+              "name": "Onion",
+              "amount": 100
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

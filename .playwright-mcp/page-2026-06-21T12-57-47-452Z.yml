@@ -1,0 +1,130 @@
+- main [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - paragraph [ref=e7]: Factory Recipes
+        - heading "Big Ambitions Production Planner" [level=1] [ref=e8]
+        - paragraph [ref=e9]: Plan production lines, equipment investment, expected output, and ingredient orders for the selected work time.
+      - generic [ref=e10]:
+        - button "Reset" [ref=e11] [cursor=pointer]:
+          - img [ref=e12]
+          - text: Reset
+        - button "Add Line" [active] [ref=e13] [cursor=pointer]:
+          - img [ref=e14]
+          - text: Add Line
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - heading "Factory Control" [level=2] [ref=e17]
+        - paragraph [ref=e18]: Each card represents one production setup. Configuration is saved automatically in this browser.
+      - generic [ref=e19]:
+        - article [ref=e20]:
+          - generic [ref=e21]:
+            - generic [ref=e22]:
+              - paragraph [ref=e23]: Production Line
+              - heading "Line 1" [level=2] [ref=e24]
+            - button "Remove line 1" [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+          - generic [ref=e27]:
+            - generic [ref=e28]:
+              - generic [ref=e29]: Workstation
+              - combobox "Workstation" [ref=e30]:
+                - option "Jewelry Workstation" [selected]
+                - option "Food Workstation"
+            - generic [ref=e31]:
+              - generic [ref=e32]: Product
+              - combobox "Product" [ref=e33]:
+                - option "Jewelry (Expensive)" [selected]
+                - option "Jewelry (Cheap)"
+            - generic [ref=e34]:
+              - generic [ref=e35]: Lines
+              - spinbutton "Lines" [ref=e36]: "1"
+            - generic [ref=e37]:
+              - generic [ref=e38]: Work Hours
+              - spinbutton "Work Hours" [ref=e39]: "24"
+            - group "Worker Experience" [ref=e40]:
+              - generic [ref=e41]: Worker Experience
+              - generic [ref=e42]:
+                - generic [ref=e43] [cursor=pointer]:
+                  - radio "Exp < 100%" [checked] [ref=e44]
+                  - generic [ref=e45]: Exp < 100%
+                - generic [ref=e46] [cursor=pointer]:
+                  - radio "Exp = 100%" [ref=e47]
+                  - generic [ref=e48]: Exp = 100%
+        - article [ref=e98]:
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - paragraph [ref=e101]: Production Line
+              - heading "Line 2" [level=2] [ref=e102]
+            - button "Remove line 2" [ref=e103] [cursor=pointer]:
+              - img [ref=e104]
+          - generic [ref=e105]:
+            - generic [ref=e106]:
+              - generic [ref=e107]: Workstation
+              - combobox "Workstation" [ref=e108]:
+                - option "Jewelry Workstation" [selected]
+                - option "Food Workstation"
+            - generic [ref=e109]:
+              - generic [ref=e110]: Product
+              - combobox "Product" [ref=e111]:
+                - option "Jewelry (Expensive)" [selected]
+                - option "Jewelry (Cheap)"
+            - generic [ref=e112]:
+              - generic [ref=e113]: Lines
+              - spinbutton "Lines" [ref=e114]: "1"
+            - generic [ref=e115]:
+              - generic [ref=e116]: Work Hours
+              - spinbutton "Work Hours" [ref=e117]: "24"
+            - group "Worker Experience" [ref=e118]:
+              - generic [ref=e119]: Worker Experience
+              - generic [ref=e120]:
+                - generic [ref=e121] [cursor=pointer]:
+                  - radio "Exp < 100%" [checked] [ref=e122]
+                  - generic [ref=e123]: Exp < 100%
+                - generic [ref=e124] [cursor=pointer]:
+                  - radio "Exp = 100%" [ref=e125]
+                  - generic [ref=e126]: Exp = 100%
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - paragraph [ref=e53]: Required Equipment
+            - heading "$1,020,000" [level=2] [ref=e127]
+          - img [ref=e56]
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - paragraph [ref=e60]: Consumer Goods Assembly Machine
+              - paragraph [ref=e61]: 2 machines x $240,000
+            - paragraph [ref=e62]: $480,000
+          - generic [ref=e63]:
+            - generic [ref=e64]:
+              - paragraph [ref=e65]: Laser Cutting Machine
+              - paragraph [ref=e66]: 2 machines x $145,000
+            - paragraph [ref=e67]: $290,000
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - paragraph [ref=e70]: Polishing Machine
+              - paragraph [ref=e71]: 2 machines x $125,000
+            - paragraph [ref=e72]: $250,000
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - paragraph [ref=e76]: Production Output
+            - heading "720 units" [level=2] [ref=e128]
+          - img [ref=e79]
+        - generic [ref=e81]:
+          - paragraph [ref=e82]: Jewelry (Expensive)
+          - paragraph [ref=e83]: "720"
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - paragraph [ref=e87]: Ingredient Order
+            - heading "2,880 items" [level=2] [ref=e129]
+          - img [ref=e90]
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - paragraph [ref=e93]: Metal Band
+            - paragraph [ref=e94]: 1,440
+          - generic [ref=e95]:
+            - paragraph [ref=e96]: Uncut Gems (Expensive)
+            - paragraph [ref=e97]: 1,440
