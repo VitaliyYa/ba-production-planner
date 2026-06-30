@@ -3,6 +3,7 @@
 
   export let items = []
   export let totalItems = 0
+  export let palletShelves = 0
   export let formatNumber
 </script>
 
@@ -29,4 +30,9 @@
   {:else}
     <p class="rounded-md bg-slate-50 p-3 text-sm text-slate-500">Ingredient needs are aggregated across all production lines.</p>
   {/if}
+
+  <div class="mt-4 grid gap-2 rounded-md bg-amber-50 p-3 text-sm">
+    <p class="text-amber-900">This calculation covers the weekly ingredient reserve for automated supplier delivery every 7 days.</p>
+    <p class="font-semibold text-amber-950">Required Pallet Shelves for 7-day ingredient reserve (auto-delivery): {formatNumber(palletShelves)}</p>
+  </div>
 </section>
