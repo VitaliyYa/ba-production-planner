@@ -3,6 +3,7 @@
 
   export let items = []
   export let totalUnits = 0
+  export let dailyBufferPalletShelves = 0
   export let formatNumber
 </script>
 
@@ -29,4 +30,9 @@
   {:else}
     <p class="rounded-md bg-slate-50 p-3 text-sm text-slate-500">Select products to see the total output for the chosen hours.</p>
   {/if}
+
+  <div class="mt-4 grid gap-2 rounded-md bg-sky-50 p-3 text-sm">
+    <p class="text-sky-900">Finished goods are picked up from storage at 02:00, so shelves cover only a temporary daily buffer.</p>
+    <p class="font-semibold text-sky-950">Required Pallet Shelves for daily production buffer (until 02:00 pickup): {formatNumber(dailyBufferPalletShelves)}</p>
+  </div>
 </section>

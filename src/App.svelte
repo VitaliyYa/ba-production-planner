@@ -21,6 +21,10 @@
   const formatNumber = (value) => numberFormatter.format(value)
 
   const workstations = factoryData.workstations
+  const piecesPerBox = factoryData.pieces_per_box
+  const defaultPiecesPerBox = 500
+  const palletShelfBoxCapacity = 60
+  const dailyProductionBufferHours = 24
 
   function getWorkstation(line) {
     return workstations[line.workstation]
@@ -34,6 +38,18 @@
     const current = map.get(name) ?? { name, amount: 0, ...extra }
     current.amount += amount
     map.set(name, current)
+  }
+
+  function getPiecesPerBox(name) {
+    return piecesPerBox[name] ?? defaultPiecesPerBox
+  }
+
+  function countBoxes(items) {
+    return items.reduce((sum, item) => sum + Math.ceil(item.amount / getPiecesPerBox(item.name)), 0)
+  }
+
+  function countPalletShelves(items) {
+    return Math.ceil(countBoxes(items) / palletShelfBoxCapacity)
   }
 
   function buildEquipmentSummary(lines) {
@@ -86,6 +102,29 @@
     return { items, totalUnits }
   }
 
+  function buildDailyProductionBufferSummary(lines) {
+    const products = new Map()
+
+    for (const line of lines) {
+      const product = getProduct(line)
+
+      if (!product) {
+        continue
+      }
+
+      const hourlyOutput = product.outputs[line.skill === 'max' ? 'max_skill' : 'low_skill']
+      const bufferHours = Math.min(line.hours, dailyProductionBufferHours)
+      addAggregate(products, product.name, line.quantity * bufferHours * hourlyOutput)
+    }
+
+    const items = [...products.values()].sort((a, b) => a.name.localeCompare(b.name))
+
+    return {
+      items,
+      palletShelves: countPalletShelves(items),
+    }
+  }
+
   function buildIngredientsSummary(lines) {
     const ingredients = new Map()
 
@@ -110,6 +149,8 @@
   $: equipmentSummary = buildEquipmentSummary($productionLines)
   $: productionSummary = buildProductionSummary($productionLines)
   $: ingredientsSummary = buildIngredientsSummary($productionLines)
+  $: dailyProductionBufferSummary = buildDailyProductionBufferSummary($productionLines)
+  $: ingredientPalletShelves = countPalletShelves(ingredientsSummary.items)
 </script>
 
 <main class="min-h-screen bg-slate-50">
@@ -170,11 +211,13 @@
       <ProductionSummary
         items={productionSummary.items}
         totalUnits={productionSummary.totalUnits}
+        dailyBufferPalletShelves={dailyProductionBufferSummary.palletShelves}
         {formatNumber}
       />
       <IngredientsSummary
         items={ingredientsSummary.items}
         totalItems={ingredientsSummary.totalItems}
+        palletShelves={ingredientPalletShelves}
         {formatNumber}
       />
     </section>
