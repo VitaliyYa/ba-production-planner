@@ -2,10 +2,11 @@
   import { Plus, RotateCcw } from '@lucide/svelte'
   import factoryData from './factory_data.json'
   import EquipmentSummary from './lib/components/EquipmentSummary.svelte'
+  import FactoryControls from './lib/components/FactoryControls.svelte'
   import IngredientsSummary from './lib/components/IngredientsSummary.svelte'
   import LineRow from './lib/components/LineRow.svelte'
   import ProductionSummary from './lib/components/ProductionSummary.svelte'
-  import { productionLines } from './lib/stores/productionLines'
+  import { factoriesStore, productionLines } from './lib/stores/factories'
 
   const currencyFormatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -155,18 +156,20 @@
 
 <main class="min-h-screen bg-slate-50">
   <div class="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8">
-    <header class="flex flex-col gap-4 border-b border-slate-200 pb-6 lg:flex-row lg:items-end lg:justify-between">
-      <div class="max-w-3xl">
+    <header class="flex flex-col gap-4 border-b border-slate-200 pb-6 xl:flex-row xl:items-end xl:justify-between">
+      <div class="min-w-0 max-w-3xl">
         <p class="text-sm font-semibold uppercase tracking-wide text-emerald-700">{factoryData.main_category}</p>
         <h1 class="mt-2 text-3xl font-bold text-slate-950 sm:text-4xl">Big Ambitions Production Planner</h1>
         <p class="mt-3 text-base text-slate-600">Plan production lines, equipment investment, expected output, and ingredient orders for the selected work time.</p>
       </div>
 
-      <div class="flex flex-wrap gap-3">
+      <div class="flex w-full flex-wrap items-center gap-3 xl:w-auto xl:shrink-0 xl:justify-end">
+        <FactoryControls />
         <button
           class="inline-flex h-10 items-center gap-2 rounded-md border border-slate-300 bg-white px-4 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-100"
           type="button"
-          on:click={productionLines.reset}
+          title="Clear the active factory"
+          on:click={factoriesStore.resetActiveFactory}
         >
           <RotateCcw size={16} />
           Reset
@@ -174,7 +177,7 @@
         <button
           class="inline-flex h-10 items-center gap-2 rounded-md bg-emerald-700 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800"
           type="button"
-          on:click={productionLines.addLine}
+          on:click={factoriesStore.addLine}
         >
           <Plus size={16} />
           Add Line
@@ -185,20 +188,36 @@
     <section class="grid gap-4">
       <div class="flex flex-col gap-1">
         <h2 class="text-xl font-semibold text-slate-950">Factory Control</h2>
-        <p class="text-sm text-slate-600">Each card represents one production setup. Configuration is saved automatically in this browser.</p>
+        <p class="text-sm text-slate-600">Each card represents one production setup in the active factory. Configuration is saved automatically in this browser.</p>
       </div>
 
       <div class="grid gap-4">
-        {#each $productionLines as line, index (line.id)}
-          <LineRow
-            {line}
-            {index}
-            {workstations}
-            removable={$productionLines.length > 1}
-            onUpdate={productionLines.updateLine}
-            onRemove={productionLines.removeLine}
-          />
-        {/each}
+        {#if $productionLines.length > 0}
+          {#each $productionLines as line, index (line.id)}
+            <LineRow
+              {line}
+              {index}
+              {workstations}
+              onUpdate={factoriesStore.updateLine}
+              onRemove={factoriesStore.removeLine}
+            />
+          {/each}
+        {:else}
+          <div class="grid justify-items-center gap-3 rounded-lg border border-dashed border-slate-300 bg-white px-6 py-10 text-center">
+            <div>
+              <h3 class="font-semibold text-slate-950">No production lines yet</h3>
+              <p class="mt-1 text-sm text-slate-600">Add the first line to configure production for this factory.</p>
+            </div>
+            <button
+              class="inline-flex h-10 items-center gap-2 rounded-md bg-emerald-700 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800"
+              type="button"
+              on:click={factoriesStore.addLine}
+            >
+              <Plus size={16} />
+              Add First Line
+            </button>
+          </div>
+        {/if}
       </div>
     </section>
 
