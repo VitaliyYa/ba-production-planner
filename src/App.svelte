@@ -184,7 +184,7 @@
           <p class="mt-1 text-sm text-slate-600">Each card represents one production setup in the active factory. Configuration is saved automatically in this browser.</p>
         </div>
         <button
-          class="inline-flex h-10 shrink-0 items-center justify-center gap-2 self-start rounded-md bg-emerald-700 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800 sm:self-auto"
+          class="inline-flex h-10 shrink-0 items-center justify-center gap-2 self-end rounded-md bg-emerald-700 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800 sm:self-auto"
           type="button"
           on:click={factoriesStore.addLine}
         >
