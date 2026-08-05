@@ -1,43 +1,66 @@
-# Svelte + Vite
+# Big Ambitions Production Planner
 
-This template should help get you started developing with Svelte in Vite.
+Веб-калькулятор для планирования фабрик в **Big Ambitions**. Он помогает подобрать производственные линии и заранее оценить стоимость оборудования, объём выпуска, потребность в ингредиентах и количество паллетных стеллажей.
 
-## Recommended IDE Setup
+Все расчёты выполняются в браузере. Фабрики и их настройки автоматически сохраняются в `localStorage` и не отправляются на сервер.
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## Возможности
 
-## Need an official Svelte framework?
+- создание, переименование, переключение и удаление нескольких фабрик;
+- настройка рабочей станции, продукта, количества линий и времени работы (от 1 до 168 часов);
+- учёт опыта сотрудников: ниже 100% или 100%;
+- расчёт количества и общей стоимости необходимого оборудования;
+- сводный расчёт выпуска и ингредиентов по всем линиям активной фабрики;
+- оценка паллетных стеллажей для недельного запаса ингредиентов и суточного буфера готовой продукции;
+- автоматическое сохранение конфигурации в текущем браузере.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+В исходном наборе данных представлены 7 типов рабочих станций и 62 продукта. Рецепты, производительность, цены оборудования и вместимость коробок находятся в [`src/factory_data.json`](src/factory_data.json).
 
-## Technical considerations
+## Запуск локально
 
-**Why use this over SvelteKit?**
+Понадобятся [Node.js](https://nodejs.org/) и npm.
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+```bash
+git clone <repository-url>
+cd ba-production-planner
+npm ci
+npm run dev
+```
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+После запуска Vite выведет адрес приложения в терминале (обычно `http://localhost:5173`).
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+## Команды
 
-**Why include `.vscode/extensions.json`?**
+```bash
+npm run dev      # сервер разработки с HMR
+npm run build    # production-сборка в dist/
+npm run preview  # локальный просмотр production-сборки
+```
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+## Как выполняются расчёты
 
-**Why enable `checkJs` in the JS template?**
+- **Оборудование** — комплект станков рабочей станции умножается на количество линий; стоимость суммируется по всем линиям.
+- **Выпуск** — количество линий × часы работы × производительность продукта для выбранного уровня опыта.
+- **Ингредиенты** — количество линий × часы работы × расход ингредиента из рецепта.
+- **Хранение** — объём каждого товара округляется вверх до целого числа коробок, после чего общее число коробок делится на вместимость паллетного стеллажа (60 коробок). Для готовой продукции учитывается буфер не более 24 часов.
 
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
+Результат зависит от данных в `src/factory_data.json`; при изменении игровых рецептов или баланса этот файл необходимо обновить.
 
-**Why is HMR not preserving my local component state?**
+## Технологии
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
+- Svelte 5
+- Vite 8
+- Tailwind CSS 3
+- Lucide Icons
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+Приложение является статическим SPA: после `npm run build` содержимое каталога `dist/` можно разместить на любом статическом хостинге. Относительный `base` уже настроен в [`vite.config.js`](vite.config.js).
 
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+## Структура проекта
+
+```text
+src/
+├── App.svelte                  # расчёты и компоновка страницы
+├── factory_data.json           # станции, рецепты и параметры хранения
+├── lib/components/             # элементы управления и итоговые карточки
+└── lib/stores/factories.js     # состояние фабрик, миграция и localStorage
 ```
