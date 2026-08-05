@@ -6,7 +6,7 @@
   import IngredientsSummary from './lib/components/IngredientsSummary.svelte'
   import LineRow from './lib/components/LineRow.svelte'
   import ProductionSummary from './lib/components/ProductionSummary.svelte'
-  import { factoriesStore, productionLines } from './lib/stores/factories'
+  import { activeFactory, factoriesStore, productionLines } from './lib/stores/factories'
 
   const currencyFormatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -174,21 +174,23 @@
           <RotateCcw size={16} />
           Reset
         </button>
+      </div>
+    </header>
+
+    <section class="grid gap-4">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div class="min-w-0">
+          <h2 class="break-words text-xl font-semibold text-slate-950">Factory: {$activeFactory.name}</h2>
+          <p class="mt-1 text-sm text-slate-600">Each card represents one production setup in the active factory. Configuration is saved automatically in this browser.</p>
+        </div>
         <button
-          class="inline-flex h-10 items-center gap-2 rounded-md bg-emerald-700 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800"
+          class="inline-flex h-10 shrink-0 items-center justify-center gap-2 self-start rounded-md bg-emerald-700 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800 sm:self-auto"
           type="button"
           on:click={factoriesStore.addLine}
         >
           <Plus size={16} />
           Add Line
         </button>
-      </div>
-    </header>
-
-    <section class="grid gap-4">
-      <div class="flex flex-col gap-1">
-        <h2 class="text-xl font-semibold text-slate-950">Factory Control</h2>
-        <p class="text-sm text-slate-600">Each card represents one production setup in the active factory. Configuration is saved automatically in this browser.</p>
       </div>
 
       <div class="grid gap-4">
