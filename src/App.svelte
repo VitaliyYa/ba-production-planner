@@ -160,7 +160,7 @@
       <div class="min-w-0 max-w-3xl">
         <p class="text-sm font-semibold uppercase tracking-wide text-emerald-700">{factoryData.main_category}</p>
         <h1 class="mt-2 text-3xl font-bold text-slate-950 sm:text-4xl">Big Ambitions Production Planner</h1>
-        <p class="mt-3 text-base text-slate-600">Plan production lines, equipment investment, expected output, and ingredient orders for the selected work time.</p>
+        <p class="mt-3 text-base text-slate-600">Plan production lines, equipment investment, expected output, and ingredient orders for the selected work time. Configuration is saved automatically in this browser.</p>
       </div>
 
       <div class="flex w-full flex-wrap items-center gap-3 xl:w-auto xl:shrink-0 xl:justify-end">
@@ -181,7 +181,7 @@
       <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div class="min-w-0">
           <h2 class="break-words text-xl font-semibold text-slate-950">Factory: {$activeFactory.name}</h2>
-          <p class="mt-1 text-sm text-slate-600">Each card represents one production setup in the active factory. Configuration is saved automatically in this browser.</p>
+          <p class="mt-1 text-sm text-slate-600">Each card represents one production setup in the active factory.</p>
         </div>
         <button
           class="inline-flex h-10 shrink-0 items-center justify-center gap-2 self-end rounded-md bg-emerald-700 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800 sm:self-auto"
